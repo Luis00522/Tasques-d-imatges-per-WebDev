@@ -7,7 +7,102 @@
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
       rel="stylesheet"
     />
-    <title>Document</title>
+    <title>Document</title><!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Imágenes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .galeria {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        details {
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        img {
+            width: 150px;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        ::details-content {
+            transition: width 0.5s ease, content-visibility 0.5s ease allow-discrete;
+            width: 0;
+        }
+
+        [open]::details-content {
+            width: 300px;
+        }
+
+        .img-expanded {
+            width: 100%;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Galería de Imágenes</h1>
+    <div class="galeria">
+        <details>
+            <summary>
+                <img src="https://picsum.photos/150/100?random=1" alt="Imagen 1">
+            </summary>
+            <div>
+                <img class="img-expanded" src="https://picsum.photos/300/200?random=1" alt="Imagen 1 Ampliada">
+            </div>
+        </details>
+        <details>
+            <summary>
+                <img src="https://picsum.photos/150/100?random=2" alt="Imagen 2">
+            </summary>
+            <div>
+                <img class="img-expanded" src="https://picsum.photos/300/200?random=2" alt="Imagen 2 Ampliada">
+            </div>
+        </details>
+        <details>
+            <summary>
+                <img src="https://picsum.photos/150/100?random=3" alt="Imagen 3">
+            </summary>
+            <div>
+                <img class="img-expanded" src="https://picsum.photos/300/200?random=3" alt="Imagen 3 Ampliada">
+            </div>
+        </details>
+        <details>
+            <summary>
+                <img src="https://picsum.photos/150/100?random=4" alt="Imagen 4">
+            </summary>
+            <div>
+                <img class="img-expanded" src="https://picsum.photos/300/200?random=4" alt="Imagen 4 Ampliada">
+            </div>
+        </details>
+    </div>
+
+</body>
+</html>
   </head>
   <body>
 
